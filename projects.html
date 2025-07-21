@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Priyanka Bandaru Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Priyanka Bandaru</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="projects.html">Projects</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact Info</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact Info</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        
+      <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+
+        <section class="experience-section" id="experience">
+          <h2 class="heading">Professional <span>Experience</span></h2>
+          <div class="experience-card">
+            <div class="company-logo">
+              <img src="infosys2.jpg" alt="">
+            </div>
+            <div class="card-contents">
+              <h3>Systems Engineer</h3>
+              <p class="company">Appian Developer</p>
+              <p class="company">Infosys Ltd | Nov 2021 – July 2023</p>
+              <ul>
+                <li><i class="fas fa-chart-line"></i> Assisted in developing and testing business applications using Appian low-code platform.</li>
+                <li><i class="fa-brands fa-wpforms"></i> Designed basic SAIL interfaces and helped configure user forms and workflows.</li>
+                <li><i class="fa-solid fa-bars-staggered"></i> Created Appian Records and built reports to display employee and project data.</li>
+                <li><i class="fas fa-database"></i> Developed modular and reusable Appian objects including interfaces, expressions, rules, and constants.</li>
+                <li><i class="fas fa-users"></i> Gained hands-on experience with CDTs, Data Stores, and Process Models and participated in requirement gathering and user testing phases with project stakeholders.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2 class="heading"><span>Personal</span> Projects</h2>
+
+            <div class="card-container">
+              <div class="card">
+                <img src="cp.jpg" alt="Sales Dashboard">
+                <div class="card-content">
+                  <h3><i class="fas fa-chart-line"></i> Sales Dashboard</h3>
+                  <p>Interactive Tableau dashboard for tracking sales and profit by region and category.</p>
+                  <p><strong>Tools:</strong> Tableau, Excel</p>
+                  <a href="https://public.tableau.com/app/profile/priyanka.bandaru/viz/SalesDashboard_17513091922410/Dashboard2?publish=yes" target="_blank">View Project</a>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="cp2.jpg" alt="Masters Research Project">
+                <div class="card-content">
+                  <h3><i class="fas fa-chart-bar"></i> Masters Research Project</h3>
+                  <p>Interactive Tableau dashboard for tracking the current job market for Business Analyst job roles</p>
+                  <p><strong>Tools:</strong> Tableau, Excel</p>
+                  <a href="https://public.tableau.com/app/profile/priyanka.bandaru/viz/projectdashboard_v2024_4/VACANCIES" target="_blank">View Project</a>
+                </div>
+              </div>
+
+              <!--<div class="card">
+                <img src="images/project3.png" alt="SQL Analysis">
+                <div class="card-content">
+                  <h3><i class="fas fa-database"></i> SQL Analysis</h3>
+                  <p>Analyzed orders and returns using complex SQL queries and joins.</p>
+                  <p><strong>Tools:</strong> MySQL, Power BI</p>
+                  <a href="https://github.com/yourrepo2" target="_blank">View Project</a>
+                </div>
+              </div>-->
+            </div>  
+        </section>
+        <footer class="footer" id="footer">
+          <p>© 2025 Priyanka Bandaru</p>
+        </footer>
+        <script>
+        let lastScrollY = window.scrollY;
+        const footer = document.getElementById("footer");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY < lastScrollY) {
+            // scrolling down
+            footer.classList.add("hide");
+          } else {
+            // scrolling up
+            footer.classList.remove("hide");
+          }
+          lastScrollY = window.scrollY;
+        });
+        </script>
+
+
+</body>
+</html>
